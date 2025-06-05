@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <base href="/static/admins/admin_home/">
+ <title>{% block title %}admin page{% endblock %}</title>
+    <style>
+   .service {
+      background-color: #f0f0f0; /* Replace with your desired background color */
+      /* Additional styles if needed */
+   }
+</style>
+
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <!-- //Fonts -->
+<style>
+        /* Your custom CSS here */
+        .w3layouts_main_grid select {
+            outline: none;
+            width: 72%; /* Adjust the width as needed */
+            background: rgba(255, 255, 255, 0.17);
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid rgba(152, 149, 149, 0.42);
+        }
+        .w3_main_grid_right {
+            text-align: center; /* Center align contents within the grid */
+        }
+</style>
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+
+<body>
+
+
+    <!-- mian-content -->
+    <div class="main-banner" id="home">
+        <!-- header -->
+        <header class="header">
+            <div class="container-fluid px-lg-5">
+                <!-- nav -->
+                <nav class="py-4">
+                    <div id="logo">
+<!--                        <h1> <a href="index.html"><span class="fa fa-bold" aria-hidden="true">dministrator</span></a></h1>-->
+                    </div>
+
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2">
+                        <li class="active" ><a href="{% url 'admin_home' %}">Home</a></li>
+     <li class="dropdown">
+                            <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"
+                                    aria-hidden="true"></span></label>
+                            <a href="/admin_home/">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>
+                                <li><a href="/heat_exchange_details/">Heat Exchange</a></li>
+                                <li><a href="/brine_intake_details/">Brine Intake</a></li>
+                                <li><a href="/heat_testing_details/">Heat Testing</a></li>
+                            </ul>
+                        </li>
+                           <li><a href="/admin_requirements/">Requirements</a></li>
+                         <li><a href="/admin_Manage_status/">Manage_status</a></li>
+                        <li class="dropdown">
+                            <label for="drop-2" class="toggle">REPORTS <span class="fa fa-angle-down"
+                                    aria-hidden="true"></span></label>
+                            <a href="/admin_home/">REPORTS <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li><a href="/pt_report">PTA REPORT</a></li>
+                                <li><a href="/he_report/">HEA REPORT</a></li>
+                                <li><a href="/bi_report/">BIA REPORT</a></li>
+                                <li><a href="/ht_report/">HTA REPORT</a></li>
+                            </ul>
+                        </li>
+
+
+                         <li><a href="/admin_logout/">LOGOUT</a></li>
+<!--                       <li class="dropdown">-->
+<!--                            <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"-->
+<!--                                    aria-hidden="true"></span></label>-->
+<!--                            <a href="#">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>-->
+<!--                            <input type="checkbox" id="drop-2" />-->
+<!--                            <ul>-->
+<!--                                <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>-->
+<!--                                <li><a href="/heat_exchange_details/">Heat Exchange</a></li>-->
+<!--                                <li><a href="/brine_intake_details/">Brine Intake</a></li>-->
+<!--                                <li><a href="/heat_testing_details/">Heat Testing</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+
+
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+        <!--/banner-->
+        <div class="banner-info">
+<!--            <p>Heat Exchanger Analysis</p>-->
+            <h3 class="mb-4">Administrator</h3>
+            <div class="ban-buttons">
+<!--                <a href="shop-single.html" class="btn">Shop Now</a>-->
+
+            </div>
+        </div>
+        <!--// banner-inner -->
+
+
+    <!--//main-content-->
+    <!--/ab -->
+<!--    <section class="about py-md-5 py-5">-->
+<!--        <div class="container-fluid">-->
+<!--            <div class="feature-grids row px-3">-->
+<!--                <div class="col-lg-3 gd-bottom">-->
+<!--                    <div class="bottom-gd row">-->
+<!--                        <div class="icon-gd col-md-3 text-center"><span class="fa fa-truck" aria-hidden="true"></span></div>-->
+<!--                        <div class="icon-gd-info col-md-9">-->
+<!--                            <h3 class="mb-2">FREE SHIPPING</h3>-->
+<!--                            <p>On all order over $2000</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-3 gd-bottom">-->
+<!--                    <div class="bottom-gd row bottom-gd2-active">-->
+<!--                        <div class="icon-gd col-md-3 text-center"><span class="fa fa-bullhorn" aria-hidden="true"></span></div>-->
+<!--                        <div class="icon-gd-info col-md-9">-->
+<!--                            <h3 class="mb-2">FREE RETURN</h3>-->
+<!--                            <p>On 1st exchange in 30 days</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-3 gd-bottom">-->
+<!--                    <div class="bottom-gd row">-->
+<!--                        <div class="icon-gd col-md-3 text-center"> <span class="fa fa-gift" aria-hidden="true"></span></div>-->
+
+<!--                        <div class="icon-gd-info col-md-9">-->
+<!--                            <h3 class="mb-2">MEMBER DISCOUNT</h3>-->
+<!--                            <p>Register & save up to $29%</p>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-3 gd-bottom">-->
+<!--                    <div class="bottom-gd row">-->
+<!--                        <div class="icon-gd col-md-3 text-center"> <span class="fa fa-usd" aria-hidden="true"></span></div>-->
+<!--                        <div class="icon-gd-info col-md-9">-->
+<!--                            <h3 class="mb-2">PREMIUM SUPPORT</h3>-->
+<!--                            <p>Support 24 hours per day</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; //ab &ndash;&gt;-->
+<!--    &lt;!&ndash;/ab &ndash;&gt;-->
+
+
+
+<!--                    <div class="cpy-right text-left row">-->
+<!--                        <p class="col-md-10">© 2019 Bootie. All rights reserved | Design by-->
+<!--                            <a href="http://w3layouts.com"> W3layouts.</a>-->
+<!--                        </p>-->
+<!--                        &lt;!&ndash; move top icon &ndash;&gt;-->
+<!--                        <a href="#home" class="move-top text-right col-md-2"><span class="fa fa-long-arrow-up" aria-hidden="true"></span></a>-->
+<!--                        &lt;!&ndash; //move top icon &ndash;&gt;-->
+<!--                    </div>-->
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- //footer -->
+</div>
+ <section  class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
+         <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+            <h3 class="title clr text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Our Services</h3>
+            <div class="row top-service pb-lg-4 pb-md-3 pb-2">
+               <div class="col-lg-8 col-md-8 service-wthree-info-left" >
+                  <div class="mb-lg-5 mb-md-4 mb-3 service-num-left">
+<!--                     <h6>1</h6>-->
+                  </div>
+                  <h4 class="mb-lg-4 mb-3"> Professional Agency</h4>
+                  <p>At our agency, we provide expert solutions tailored to meet the unique needs of our clients. Our team is dedicated to delivering high-quality services across various sectors, including advanced technical and analytical support. Our professional services are designed to ensure optimal performance and efficiency for your projects.</p>
+               </div>
+               <div class="col-lg-4 col-md-4 ser-service gap-service text-center">
+                  <div class="service-icon-one">
+                     <img src="images/ser1.png" alt="" class="img-fluid">
+                  </div>
+               </div>
+            </div>
+            <div class=" my-lg-5 my-md-4 my-sm-4 my-3 row mid-service">
+               <div class="col-lg-4 col-md-4 ser-service  text-center">
+                  <div class="service-icon-two move-right">
+                     <img src="images/ser2.png" alt="" class="img-fluid">
+                  </div>
+               </div>
+               <div class="col-lg-8 col-md-8 service-wthree-info-left">
+                  <div class="mb-lg-5 mb-md-4 mb-3 service-num-left">
+<!--                     <h6>2</h6>-->
+                  </div>
+                  <h4 class="mb-lg-4 mb-3">Tax Advice and Management</h4>
+                  <p>Our tax advisory services are designed to help you navigate complex tax regulations and optimize your financial strategies. We provide personalized solutions to ensure compliance and maximize tax efficiency for individuals and businesses</p>
+               </div>
+            </div>
+            <div class="row bottom-service pt-lg-4 pt-md-3 pt-2">
+               <div class="col-lg-8 col-md-8 service-wthree-info-left" >
+                  <div class="mb-lg-5 mb-md-4 mb-3 service-num-left">
+<!--                     <h6>3</h6>-->
+                  </div>
+                  <h4 class="mb-lg-4 mb-3">Planning & Strategy</h4>
+                  <p>Effective planning and strategic thinking are essential for achieving your business objectives. We provide tailored planning and strategic solutions to help you navigate challenges and seize opportunities in a competitive environment.</p>
+               </div>
+               <div class="col-lg-4 col-md-4 ser-service gap-service text-center">
+                  <div class="service-icon-three">
+                     <img src="images/ser3.png" alt="" class="img-fluid">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+</body>
+
+</html>
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="zxx">-->
+
+<!--<head>-->
+<!--    <base href="/static/admins/admin_home/">-->
+<!--    <title>Admin Page</title>-->
+
+<!--    &lt;!&ndash; Meta tag Keywords &ndash;&gt;-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <meta name="keywords" content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />-->
+<!--    <script>-->
+<!--        addEventListener("load", function() {-->
+<!--            setTimeout(hideURLbar, 0);-->
+<!--        }, false);-->
+
+<!--        function hideURLbar() {-->
+<!--            window.scrollTo(0, 1);-->
+<!--        }-->
+<!--    </script>-->
+<!--    &lt;!&ndash; //Meta tag Keywords &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Custom-Files &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{% static 'admins/admin_home/css/bootstrap.css' %}">-->
+<!--    &lt;!&ndash; Bootstrap-Core-CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{% static 'admins/admin_home/css/style.css' %}" type="text/css" media="all" />-->
+<!--    &lt;!&ndash; Style-CSS &ndash;&gt;-->
+<!--    &lt;!&ndash; font-awesome-icons &ndash;&gt;-->
+<!--    <link href="{% static 'admins/admin_home/css/font-awesome.css' %}" rel="stylesheet">-->
+<!--    &lt;!&ndash; //font-awesome-icons &ndash;&gt;-->
+<!--    &lt;!&ndash; /Fonts &ndash;&gt;-->
+<!--    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">-->
+<!--    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">-->
+<!--    &lt;!&ndash; //Fonts &ndash;&gt;-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--    &lt;!&ndash; mian-content &ndash;&gt;-->
+<!--    <div class="main-banner" id="home">-->
+<!--        &lt;!&ndash; header &ndash;&gt;-->
+<!--        <header class="header">-->
+<!--            <div class="container-fluid px-lg-5">-->
+<!--                &lt;!&ndash; nav &ndash;&gt;-->
+<!--                <nav class="py-4">-->
+<!--                    <div id="logo">-->
+<!--                        &lt;!&ndash; <h1> <a href="index.html"><span class="fa fa-bold" aria-hidden="true">Administrator</span></a></h1> &ndash;&gt;-->
+<!--                    </div>-->
+
+<!--                    <label for="drop" class="toggle">Menu</label>-->
+<!--                    <input type="checkbox" id="drop" />-->
+<!--                    <ul class="menu mt-2">-->
+<!--                        <li class="active"><a href="{% url 'admin_home' %}">Home</a></li>-->
+
+<!--                        <li class="dropdown">-->
+<!--                            <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"-->
+<!--                                    aria-hidden="true"></span></label>-->
+<!--                            <a href="#">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>-->
+<!--                            <input type="checkbox" id="drop-2" />-->
+<!--                            <ul>-->
+<!--                                <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>-->
+<!--                                <li><a href="/heat_exchange_details/">Heat Exchange</a></li>-->
+<!--                                <li><a href="/brine_intake_details/">Brine Intake</a></li>-->
+<!--                                <li><a href="/heat_testing_details/">Heat Testing</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+
+<!--                        <li><a href="/he_register/">Report</a></li>-->
+<!--                        <li><a href="/bi_register/">Analysis</a></li>-->
+<!--                        <li><a href="/ht_register/">Heat Testing</a></li>-->
+<!--                    </ul>-->
+<!--                </nav>-->
+<!--                &lt;!&ndash; //nav &ndash;&gt;-->
+<!--            </div>-->
+<!--        </header>-->
+<!--        &lt;!&ndash; //header &ndash;&gt;-->
+
+
+<!--    &lt;!&ndash;//main-content&ndash;&gt;-->
+
+<!--    &lt;!&ndash; Footer &ndash;&gt;-->
+<!--    <footer>-->
+<!--        <div class="cpy-right text-left row">-->
+<!--            <p class="col-md-10">© 2019 Bootie. All rights reserved | Design by-->
+<!--                <a href="http://w3layouts.com"> W3layouts.</a>-->
+<!--            </p>-->
+<!--            &lt;!&ndash; move top icon &ndash;&gt;-->
+<!--            <a href="#home" class="move-top text-right col-md-2"><span class="fa fa-long-arrow-up"-->
+<!--                    aria-hidden="true"></span></a>-->
+<!--            &lt;!&ndash; //move top icon &ndash;&gt;-->
+<!--        </div>-->
+<!--    </footer>-->
+<!--    &lt;!&ndash; //footer &ndash;&gt;-->
+
+
+<!--</body>-->
+
+<!--</html>-->

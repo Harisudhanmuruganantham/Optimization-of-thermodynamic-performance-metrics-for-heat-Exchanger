@@ -1,0 +1,23 @@
+Brine Solution,Composition (% mass),Thermal Conductivity (W/(m·K)),Density (kg/m³),Heat Transfer Coefficient (W/(m²·K))
+Calcium Chloride,CaCl?: 25-30%; Water: Balance (70-75%),0.6 - 0.8,1100 - 1200,50 - 70
+Potassium Formate,HCOOK (potassium formate): 40-50%; Water: Balance (50-60%),0.7 - 0.9,1050 - 1150,60 - 80
+Sodium Chloride,NaCl: 20-25%; Water: Balance (75-80%),0.5 - 0.7,1150 - 1250,45 - 65
+Magnesium Chloride,MgCl?: 30-35%; Water: Balance (65-70%),0.8 - 1.0,1000 - 1100,55 - 75
+Potassium Chloride,KCl: 25-30%; Water: Balance (70-75%),0.6 - 0.8,1120 - 1220,48 - 68
+Sodium Formate,HCOONa (sodium formate): 30-35%; Water: Balance (65-70%),0.5 - 0.7,1200 - 1300,42 - 62
+Propylene Glycol,Propylene glycol: 40-50%; Water: Balance (50-60%),0.3 - 0.4,1050 - 1150,30 - 40
+Ethylene Glycol,Ethylene glycol: 30-40%; Water: Balance (60-70%),0.2 - 0.3,1100 - 1200,25 - 35
+Methanol-Water,Methanol: 20-30%; Water: Balance (70-80%),0.2 - 0.3,950 - 1050,20 - 30
+Ammonium Chloride,NH?Cl: 20-25%; Water: Balance (75-80%),0.4 - 0.6,1000 - 1100,35 - 50
+Potassium Acetate,CH?COOK (potassium acetate): 30-40%; Water: Balance (60-70%),0.5 - 0.7,1100 - 1200,40 - 55
+Calcium Nitrate,Ca(NO?)?: 25-30%; Water: Balance (70-75%),0.6 - 0.8,1050 - 1150,45 - 60
+Lithium Bromide,LiBr: 45-55%; Water: Balance (45-55%),0.4 - 0.6,1250 - 1350,40 - 60
+Sodium Hydroxide,NaOH: 25-30%; Water: Balance (70-75%),0.4 - 0.5,1100 - 1200,35 - 50
+Ethanol-Water,Ethanol: 15-20%; Water: Balance (80-85%),0.1 - 0.2,950 - 1050,15 - 25
+Glycol-Water,Glycol (mix of ethylene or propylene): 30-40%; Water: Balance (60-70%),0.2 - 0.4,1000 - 1100,20 - 40
+Sodium Acetate,CH?COONa (sodium acetate): 30-40%; Water: Balance (60-70%),0.3 - 0.5,1050 - 1150,25 - 45
+Ammonium Nitrate,NH?NO?: 20-25%; Water: Balance (75-80%),0.3 - 0.4,1000 - 1100,30 - 40
+Sodium Nitrate,NaNO?: 30-35%; Water: Balance (65-70%),0.4 - 0.5,1100 - 1200,35 - 50
+Calcium Acetate,Ca(CH?COO)?: 25-30%; Water: Balance (70-75%),0.5 - 0.7,1050 - 1150,40 - 55
+Magnesium Sulfate,MgSO?: 20-25%; Water: Balance (75-80%),0.3 - 0.4,1000 - 1100,30 - 40
+Sodium Carbonate,Na?CO?: 25-30%; Water: Balance (70-75%),0.4 - 0.6,1100 - 1200,45 - 60

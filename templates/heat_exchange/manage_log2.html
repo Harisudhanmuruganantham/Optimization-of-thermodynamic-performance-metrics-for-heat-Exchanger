@@ -1,0 +1,457 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="zxx">-->
+
+<!--<head>-->
+<!--    <base href="/static/admins/admin_home/">-->
+<!--    <title>Admin Page</title>-->
+
+<!--    &lt;!&ndash; Meta tag Keywords &ndash;&gt;-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <meta name="keywords" content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />-->
+<!--    <script>-->
+<!--        addEventListener("load", function() {-->
+<!--            setTimeout(hideURLbar, 0);-->
+<!--        }, false);-->
+
+<!--        function hideURLbar() {-->
+<!--            window.scrollTo(0, 1);-->
+<!--        }-->
+<!--    </script>-->
+<!--    &lt;!&ndash; //Meta tag Keywords &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Custom-Files &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{% static 'admins/admin_home/css/bootstrap.css' %}">-->
+<!--    &lt;!&ndash; Bootstrap-Core-CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{% static 'admins/admin_home/css/style.css' %}" type="text/css" media="all" />-->
+<!--    &lt;!&ndash; Style-CSS &ndash;&gt;-->
+<!--    &lt;!&ndash; font-awesome-icons &ndash;&gt;-->
+<!--    <link href="{% static 'admins/admin_home/css/font-awesome.css' %}" rel="stylesheet">-->
+<!--    &lt;!&ndash; //font-awesome-icons &ndash;&gt;-->
+<!--    &lt;!&ndash; /Fonts &ndash;&gt;-->
+<!--    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">-->
+<!--    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">-->
+<!--    &lt;!&ndash; //Fonts &ndash;&gt;-->
+
+<!--    <style>-->
+<!--        /* Additional styles can be added here */-->
+<!--        .table-striped {-->
+<!--            background-color: #f8f9fa;-->
+<!--            width: 100%;-->
+<!--            margin-bottom: 1rem;-->
+<!--        }-->
+
+<!--        .table-striped th,-->
+<!--        .table-striped td {-->
+<!--            padding: 0.75rem;-->
+<!--            vertical-align: top;-->
+<!--            border-top: 1px solid #dee2e6;-->
+<!--        }-->
+
+<!--        .table-striped th {-->
+<!--            background-color: #007bff;-->
+<!--            color: #fff;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        .table-striped td {-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        .action-buttons {-->
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--        }-->
+
+<!--        .action-buttons a {-->
+<!--            margin: 0 5px;-->
+<!--        }-->
+
+<!--        .approve {-->
+<!--            background-color: #28a745;-->
+<!--            color: #fff;-->
+<!--            border: none;-->
+<!--            padding: 6px 12px;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--        .rejection {-->
+<!--            background-color: #dc3545;-->
+<!--            color: #fff;-->
+<!--            border: none;-->
+<!--            padding: 6px 12px;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--        .no-action {-->
+<!--            background-color: #6c757d;-->
+<!--            color: #fff;-->
+<!--            border: none;-->
+<!--            padding: 6px 12px;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+<!--    </style>-->
+
+<!--</head>-->
+<!--<script>-->
+<!--  {% for i in messages %}-->
+<!--   alert('{{ i }} ')-->
+<!--  {% endfor %}-->
+<!--  </script>-->
+<!--<body>-->
+
+<!--    &lt;!&ndash; mian-content &ndash;&gt;-->
+<!--    <div class="main-banner" id="home">-->
+<!--        &lt;!&ndash; header &ndash;&gt;-->
+<!--        <header class="header">-->
+<!--            <div class="container-fluid px-lg-5">-->
+<!--                &lt;!&ndash; nav &ndash;&gt;-->
+<!--                <nav class="py-4">-->
+<!--                    <div id="logo">-->
+<!--                        &lt;!&ndash; <h1> <a href="index.html"><span class="fa fa-bold" aria-hidden="true">Administrator</span></a></h1> &ndash;&gt;-->
+<!--                    </div>-->
+
+<!--                    <label for="drop" class="toggle">Menu</label>-->
+<!--                    <input type="checkbox" id="drop" />-->
+<!--                    <ul class="menu mt-2">-->
+<!--                        <li ><a href="{% url 'admin_home' %}">Home</a></li>-->
+
+<!--                        <li class="active" class="dropdown">-->
+<!--                            <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"-->
+<!--                                    aria-hidden="true"></span></label>-->
+<!--                            <a href="/admin_home/">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>-->
+<!--                            <input type="checkbox" id="drop-2" />-->
+<!--                            <ul>-->
+<!--                                <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>-->
+<!--                                <li><a href="/heat_exchange_details/"  style="color:black;">Heat Exchange</a></li>-->
+<!--                                <li><a href="/brine_intake_details/"  style="color:black;">Brine Intake</a></li>-->
+<!--                                <li><a href="/heat_testing_details/"  style="color:black;">Heat Testing</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+
+<!--                        <li><a href="/he_register/">Report</a></li>-->
+<!--                        <li><a href="/bi_register/">Analysis</a></li>-->
+<!--                        <li><a href="/ht_register/">Heat Testing</a></li>-->
+<!--                    </ul>-->
+<!--                </nav>-->
+<!--                &lt;!&ndash; //nav &ndash;&gt;-->
+<!--            </div>-->
+
+<!--            <br><br>-->
+<!--        <div class="container">-->
+
+<!--            <h2 STYLE="margin-left:400px;">PIPE TRANSFER DETAILS</h2>-->
+
+<!--<br><br>-->
+<!--            <table class="table-striped">-->
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--                        <th>ID</th>-->
+<!--                        <th>Client Id</th>-->
+<!--                        <th>Name</th>-->
+<!--                        <th>Email</th>-->
+<!--                        <th>Password</th>-->
+<!--                        <th>Phone Number</th>-->
+<!--                        <th>Modules</th>-->
+<!--                        <th>Management Actions</th>-->
+<!--                    </tr>-->
+<!--                </thead>-->
+<!--                <tbody>-->
+<!--                    {% for user in data %}-->
+<!--                    <tr>-->
+
+<!--                        <td>{{ user.id }}</td>-->
+<!--                        <td>{{ user.client_id }}</td>-->
+<!--                        <td>{{ user.name }}</td>-->
+<!--                        <td>{{ user.email }}</td>-->
+<!--                        <td>{{ user.password }}</td>-->
+<!--                        <td>{{ user.phone_number }}</td>-->
+<!--                        <td>{{ user.employee_module }}</td>-->
+<!--                        <td>-->
+<!--                            <div class="action-buttons">-->
+<!--                                {% if not user.approve and not user.reject %}-->
+<!--                                <a href="/approve/{{ user.id }}/">-->
+<!--                                    <button class="approve">APPROVE</button>-->
+<!--                                </a>-->
+<!--                                <a href="/rejection/{{ user.id }}/">-->
+<!--                                    <button class="rejection">REJECT</button>-->
+<!--                                </a>-->
+<!--                                {% endif %}-->
+<!--                                {% if user.approve %}-->
+<!--                                <button class="approve">APPROVED</button>-->
+<!--                                <button class="no-action">NO ACTION</button>-->
+<!--                                {% endif %}-->
+<!--                                {% if user.reject %}-->
+<!--                                <button class="no-action">NO ACTION</button>-->
+<!--                                <button class="rejection">REJECTED</button>-->
+<!--                                {% endif %}-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                    {% endfor %}-->
+<!--                </tbody>-->
+<!--            </table>-->
+
+<!--            &lt;!&ndash; Example: Pagination controls &ndash;&gt;-->
+<!--            &lt;!&ndash; Replace this with Django pagination logic if needed &ndash;&gt;-->
+<!--            &lt;!&ndash; <div class="pagination">-->
+<!--                <a href="?page=1">1</a>-->
+<!--                <a href="?page=2">2</a>-->
+<!--                ...-->
+<!--            </div> &ndash;&gt;-->
+
+<!--        </div>-->
+<!--        </header>-->
+<!--    </div>-->
+
+<!--</body>-->
+
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'admins/admin_home/css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'admins/admin_home/css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'admins/admin_home/css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <!-- //Fonts -->
+
+
+    <style>
+        /* Additional styles can be added here */
+        .table-striped {
+            background-color: #f8f9fa;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .table-striped th,
+        .table-striped td {
+            padding: 0.75rem;
+            vertical-align: middle; /* Adjusted vertical alignment */
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table-striped th {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+
+        .table-striped td {
+            text-align: center;
+        }
+/* General button styles */
+button {
+    border: none;
+    color: #fff;
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 6px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    background-color: transparent; /* Transparent background initially */
+}
+
+/* Approve button */
+.approve {
+    background: linear-gradient(45deg, #4CAF50, #2C6B2F); /* Gradient green */
+}
+
+/* Rejection button */
+.rejection {
+    background: linear-gradient(45deg, #F44336, #D32F2F); /* Gradient red */
+}
+
+/* No Action button */
+.no-action {
+    background: linear-gradient(45deg, #9E9E9E, #757575); /* Gradient gray */
+}
+
+/* Action buttons container */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    position: relative;
+}
+
+
+    </style>
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+<body>
+
+<!-- main-content -->
+<div class="main-banner" id="home">
+    <!-- header -->
+    <header class="header">
+        <div class="container-fluid px-lg-5">
+            <!-- nav -->
+        <nav class="py-4">
+                    <div id="logo">
+<!--                        <h1> <a href="index.html"><span class="fa fa-bold" aria-hidden="true">dministrator</span></a></h1>-->
+                    </div>
+
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2">
+                        <li  ><a href="{% url 'admin_home' %}">Home</a></li>
+     <li class="dropdown">
+                            <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"
+                                    aria-hidden="true"></span></label>
+                            <a href="/admin_home/">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>
+                                <li class="active"><a href="/heat_exchange_details/">Heat Exchange</a></li>
+                                <li><a href="/brine_intake_details/">Brine Intake</a></li>
+                                <li><a href="/heat_testing_details/">Heat Testing</a></li>
+                            </ul>
+                        </li>
+                           <li><a href="/admin_requirements/">Requirements</a></li>
+                         <li><a href="/admin_Manage_status/">Manage_status</a></li>
+                        <li class="dropdown">
+                            <label for="drop-2" class="toggle">REPORTS <span class="fa fa-angle-down"
+                                    aria-hidden="true"></span></label>
+                            <a href="/admin_home/">REPORTS <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li ><a href="/pt_report">PTA REPORT</a></li>
+                                <li ><a href="/he_report/">HEA REPORT</a></li>
+                                <li class="active"><a href="/bi_report/">BIA REPORT</a></li>
+                                <li><a href="/ht_report/">HTA REPORT</a></li>
+                            </ul>
+                        </li>
+
+                         <li><a href="/">Logout</a></li>
+<!--                       <li class="dropdown">-->
+<!--                            <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"-->
+<!--                                    aria-hidden="true"></span></label>-->
+<!--                            <a href="#">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>-->
+<!--                            <input type="checkbox" id="drop-2" />-->
+<!--                            <ul>-->
+<!--                                <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>-->
+<!--                                <li><a href="/heat_exchange_details/">Heat Exchange</a></li>-->
+<!--                                <li><a href="/brine_intake_details/">Brine Intake</a></li>-->
+<!--                                <li><a href="/heat_testing_details/">Heat Testing</a></li>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+
+
+                    </ul>
+                </nav>
+            <!-- //nav -->
+        </div>
+
+        <br><br>
+        <div class="container">
+
+            <h2 style="color:white;margin-left: 400px;">HEAT EXCHANGE DETAILS</h2>
+
+            <br><br>
+            <table class="table-striped">
+                <thead>
+                <tr>
+
+                        <th>CLIENT ID</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>PASSWORD</th>
+                        <th>PHONE NUMBER</th>
+                        <th>MODULES</th>
+                        <th>MANAGEMENT ACTIONS</th> <!-- Colspan added here -->
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in data %}
+                <tr>
+                    <td>{{ user.client_id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.password }}</td>
+                    <td>{{ user.phone_number }}</td>
+                    <td>{{ user.employee_module }}</td>
+                    <td>
+                        <div class="action-buttons">
+                            {% if not user.approve and not user.reject %}
+                            <a href="/approve/{{ user.id }}/">
+                                <button class="approve">APPROVE <span>&rarr;</span></button>
+                            </a>
+                            <a href="/rejection/{{ user.id }}/">
+                                <button class="rejection">REJECT <span>&rarr;</span></button>
+                            </a>
+                            {% endif %}
+                            {% if user.approve %}
+                            <button class="approve">APPROVED</button>
+<!--                            <p style="color:red">no action</p> &lt;!&ndash; Adjusted to use a paragraph tag &ndash;&gt;-->
+                            {% endif %}
+                            {% if user.reject %}
+<!--                            <p style="color:red">no action</p> &lt;!&ndash; Adjusted to use a paragraph tag &ndash;&gt;-->
+                            <button class="rejection">REJECTED</button>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- Example: Pagination controls -->
+            <!-- Replace this with Django pagination logic if needed -->
+            <!-- <div class="pagination">
+                <a href="?page=1">1</a>
+                <a href="?page=2">2</a>
+                ...
+            </div> -->
+
+        </div>
+    </header>
+</div>
+
+</body>
+</html>

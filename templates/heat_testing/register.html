@@ -1,0 +1,186 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<base href="/static/heat_testing/heat_testing_login/">
+	   <style>
+        /* Your custom CSS here */
+        .w3layouts_main_grid select {
+            outline: none;
+            width: 72%; /* Adjust the width as needed */
+            background: rgba(255, 255, 255, 0.17);
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid rgba(152, 149, 149, 0.42);
+        }
+		   .w3_main_grid_right {
+    text-align: center; /* Center align contents within the grid */
+}
+
+    </style>
+<title>Heat Testing</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Auditions Registration Form Widget Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!-- //custom-theme -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- font-awesome-icons -->
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Anton&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+<body>
+<!-- banner -->
+	<div class="center-container">
+	<div class="banner-dott">
+		<div class="main">
+			<h1 class="w3layouts_head">Heat_Testing Registration Form</h1>
+				<div class="w3layouts_main_grid">
+					<form action="/ht_register/" method="post" class="w3_form_post" autocomplete="off">
+                        {% csrf_token %}
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Name </label>
+								<input type="text" name="name" placeholder="Name" required="">
+							</span>
+						</div>
+
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Email </label>
+								<input type="email" name="email" placeholder="Email" required="">
+							</span>
+						</div>
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Phone Number </label>
+							 <input type="text" name="phone" placeholder="Phone Number" required="" pattern="\d{10}" title="Phone number must be 10 digits" >
+								</span>
+						</div>
+<!--						<div class="w3_agileits_main_grid w3l_main_grid">-->
+<!--							<span class="agileits_grid">-->
+<!--								<label>Category </label>-->
+<!--								<select name="module">-->
+<!--    <option value="select" selected disabled > Select a Category</option>-->
+<!--&lt;!&ndash;    <option value="Ph">Pipe Transfer</option>&ndash;&gt;-->
+<!--&lt;!&ndash;    <option value="Po">Heat Exchange</option>&ndash;&gt;-->
+<!--&lt;!&ndash;    <option value="So">Brine Intake</option>&ndash;&gt;-->
+<!--    <option value="Sp">Heat Testing</option>-->
+<!--</select>-->
+<!--							</span>-->
+<!--						</div>-->
+						<div class="w3_agileits_main_grid w3l_main_grid">
+							<div class="w3_agileits_main_grid w3l_main_grid">
+							<span class="agileits_grid">
+								<label>Catergory </label>
+								<input type="text" name="module" value="Heat Testing" readonly>
+							</span>
+						</div>
+						</div>
+<!--						<div class="agileits_w3layouts_main_grid w3ls_main_grid">-->
+<!--							<span class="agileinfo_grid">-->
+<!--								<label>Date / Time </label>-->
+<!--								<div class="agileits_w3layouts_main_gridl">-->
+<!--									<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="">-->
+<!--								</div>-->
+<!--								<div class="agileits_w3layouts_main_gridr">-->
+<!--									<input type="time" name="Time" placeholder=" " required="">-->
+<!--								</div>-->
+<!--									<div class="clear"> </div>-->
+<!--							</span>-->
+<!--						</div>-->
+<!--					-->
+					<div class="w3_main_grid">
+
+    <div class="w3_main_grid_right">
+        <input type="submit" value="Submit"></br></br>
+		<p style="color:white">if you already have an account: <a href="/ht_login/" style="color:red">Click Here</a></p>
+
+
+    </div>
+</div>
+
+				</form>
+					<br>
+					 <div class="w3_main_grid_right" >
+       <a href="/"> <input type="submit" value="Back"></a>
+    </div>
+
+			</div>
+		<!-- Calendar -->
+			<link rel="stylesheet" href="css/jquery-ui.css" />
+				<script src="js/jquery-ui.js"></script>
+					 <script>
+                $(function() {
+                    $("#datepicker").datepicker();
+                });
+
+                document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                    var email = document.getElementById('email').value;
+                    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    // Check if email is in correct format
+                    if (!regex.test(email)) {
+                        alert('Please enter a valid email address.');
+                        event.preventDefault(); // Prevent form submission
+                        return false;
+                    }
+
+                    // Check if email ends with @gmail.com
+                    if (!email.endsWith('@gmail.com')) {
+                        alert('Only Gmail addresses are allowed.');
+                        event.preventDefault(); // Prevent form submission
+                        return false;
+                    }
+
+                    // Check email uniqueness via AJAX
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/check_email/', true); // Update the URL to your endpoint
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            var response = JSON.parse(xhr.responseText);
+                            if (response.status === 'unique') {
+                                // Proceed with form submission
+                                document.getElementById('registrationForm').submit();
+                            } else {
+                                alert('This email address is already taken.');
+                            }
+                        }
+                    };
+                    xhr.send('email=' + encodeURIComponent(email));
+
+                    event.preventDefault(); // Prevent form submission until AJAX request completes
+                });
+            </script>
+		<!-- //Calendar -->
+<!--			<div class="w3layouts_copy_right">-->
+<!--				<div class="container">-->
+<!--					<p>© 2017 Auditions Registration Form. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts.</a></p>-->
+<!--				</div>-->
+<!--			</div>-->
+		</div>
+	</div>
+	</div>
+<!-- //footer -->
+</body>
+</html>

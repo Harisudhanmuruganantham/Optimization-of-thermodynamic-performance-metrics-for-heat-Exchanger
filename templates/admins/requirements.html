@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <base href="/static/admins/requirements/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin requirements</title>
+    <link rel="stylesheet" href="{% static 'admins/admin_home/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'admins/admin_home/css/style.css' %}" type="text/css" media="all" />
+    <link href="{% static 'admins/admin_home/css/font-awesome.css' %}" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-image: url('{% static "admins/admin_home/images/your-image.jpg" %}');
+            background-size: cover; /* Ensures the image covers the entire viewport */
+            background-position: center; /* Centers the image */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Removes default margin */
+        }
+
+        /* Styling for the main banner if needed */
+        .main-banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers content vertically */
+            align-items: center; /* Centers content horizontally */
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Styling the card and form */
+        .card {
+            background: rgba(255, 255, 255, 0.8); /* semi-transparent background for better visibility */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            border-radius: 4px;
+            box-shadow: none;
+        }
+
+        .btn {
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+
+<body>
+    <div class="main-banner" id="home">
+        <header class="header">
+            <div class="container-fluid px-lg-5">
+                <nav class="py-4">
+                    <div id="logo"></div>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu mt-2">
+                        <li><a href="{% url 'admin_home' %}">Home</a></li>
+                        <li class="dropdown">
+                            <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"
+                                    aria-hidden="true"></span></label>
+                            <a href="{% url 'admin_home' %}">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>
+                                <li><a href="/heat_exchange_details/">Heat Exchange</a></li>
+                                <li><a href="/brine_intake_details/">Brine Intake</a></li>
+                                <li><a href="/heat_testing_details/">Heat Testing</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="/admin_requirements/">Requirements</a></li>
+                        <li><a href="/admin_Manage_status/">Manage_status</a></li>
+                        <li class="dropdown">
+                            <label for="drop-2" class="toggle">REPORTS <span class="fa fa-angle-down"
+                                    aria-hidden="true"></span></label>
+                            <a href="/admin_home/">REPORTS <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li><a href="/pt_report">PTA REPORT</a></li>
+                                <li><a href="/he_report/">HEA REPORT</a></li>
+                                <li class="active"><a href="/bi_report/">BIA REPORT</a></li>
+                                <li><a href="/ht_report/">HTA REPORT</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/admin_logout/">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white text-center">
+                                <h3>Registration Form</h3>
+                            </div>
+                            <div class="card-body">
+                                <form method="POST" action="/admin_requirements/" autocomplete="off">
+                                    {% csrf_token %}
+                                    <div class="form-row">
+                                        <!-- Building Type -->
+                                        <div class="form-group col-md-6">
+                                            <label for="building_type">Building Type</label>
+                                            <select class="form-control" id="building_type" name="building_type" required>
+                                                <option value="">Select Building Type</option>
+                                                <option value="Apartment">Apartment</option>
+                                                <option value="House">House</option>
+                                                <option value="Office">Office</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+
+                                        <!-- Number of Rooms -->
+                                        <div class="form-group col-md-6">
+                                            <label for="number_of_rooms">Number of Rooms</label>
+                                            <input type="text" class="form-control" id="number_of_rooms" name="number_of_rooms"
+                                                placeholder="Enter number of rooms" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <!-- Area -->
+                                        <div class="form-group col-md-6">
+                                            <label for="area">Area in m<sup>2</sup></label>
+                                            <input type="text" class="form-control" id="area" name="area"
+                                                placeholder="Enter area in square meters" required>
+                                        </div>
+                                         <div class="form-group col-md-6">
+                                            <label for="building_temp">Building Temperature</label>
+                                            <input type="text" class="form-control" id="building_temp" name="building_temp"
+                                                placeholder="Enter building temperature" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <!-- Water Body -->
+                                        <div class="form-group col-md-6">
+                                            <label for="water_body">Water Body</label>
+                                            <select class="form-control" id="water_body" name="water_body" required>
+                                                <option value="">Select Water Body</option>
+                                                <option value="Lake">Lake</option>
+                                                <option value="River">River</option>
+                                                <option value="Pond">Pond</option>
+                                                <option value="Ocean">Ocean</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="building_material">Building Material</label>
+                                            <select class="form-control" id="building_material" name="building_material" required>
+                                                <option value="">Select Building Material</option>
+                                                <option value="Concrete">Concrete</option>
+                                                <option value="Bricks">Bricks</option>
+                                                <option value="Wood">Wood</option>
+                                                <option value="Glass">Glass</option>
+                                                <!-- Add more options as needed -->
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <!-- Distance to Waterbody -->
+                                        <div class="form-group col-md-6">
+                                            <label for="distance_to_water_body_m">Distance to Waterbody (m)</label>
+                                            <input type="text" class="form-control" id="distance_to_water_body_m" name="distance_to_water_body_m"
+                                                placeholder="Enter distance to water body in meters" required>
+                                        </div>
+
+                                        <!-- Water Body Temperature -->
+                                        <div class="form-group col-md-6">
+                                            <label for="water_body_temperature">Water Body Temperature (°C)</label>
+                                            <input type="text" class="form-control" id="water_body_temperature" name="water_body_temperature"
+                                                placeholder="Enter water body temperature in Celsius" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit and Back Buttons -->
+                                    <div class="text-center mt-4">
+                                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                        <a href="/admin_home/" class="btn btn-secondary">Back</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+
+</html>

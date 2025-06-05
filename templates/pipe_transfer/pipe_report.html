@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="/static/pipetransfer/pt_home/">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>pipe transfer</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+
+
+    <style>
+ body {
+        /* Adjust background image settings if needed */
+        background-image: url('/static/pipetransfer/pt_home/assets/images/pexels-brett-sayles-1000748 (1).jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh; /* Set height for full viewport height */
+        margin: 0; /* Remove default margin */
+        font-family: 'Nunito', sans-serif; /* Apply a consistent font */
+    }
+
+    .table-striped {
+
+        background-color: #f8f9fa;
+        margin-bottom: 1rem;
+    }
+
+    .table-striped th,
+    .table-striped td {
+        padding: 0.5rem; /* Adjust padding */
+        vertical-align: middle;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .table-striped th {
+        background-color: #fd5c63;
+        color: #fff;
+        text-align: center;
+    }
+
+    .table-striped td {
+        text-align: center;
+        color:black;
+    }
+
+    </style>
+
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+<body style="background-image: url('/static/pipetransfer/pt_home/assets/images/pexels-brett-sayles-1000748 (1).jpg');
+             height:100vh;
+
+
+             background-attachment: fixed;">
+  <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="/pt_home/">
+                        PIPE TRANSFER
+                    </a>
+                </h1>
+                <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li>
+                            <a class="nav-link" href="/pt_home/">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pipe_Manage_status/">REQUIREMENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pt_requirements/">PIPE TRANSFER ANALYZE</a>
+                        </li>
+                        <li  class="nav-item active">
+                            <a class="nav-link" href="/pipe_report/">PIPE TRANSFER REPORT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pipe_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <!-- search button -->
+
+                <!-- //search button -->
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+
+<br><br>
+<br><br>
+<br><br>
+
+<br><br>
+<br><br>
+<br><br>
+      <div style="max-height: 300px; overflow: auto; max-width:1100px; margin-left:100px;">
+        <table class="table-striped" >
+            <thead>
+                <tr>
+                    <th>BUILDING ID</th>
+                    <th>AREA (sqm)</th>
+                    <th>WATER BODY</th>
+                    <th>DISTANCE TO WATER BODY(m)</th>
+                    <th>WATER BODY TEMPERATURE(°C)</th>
+                    <th>MATERIAL</th>
+                    <th>DIAMETER(mm)</th>
+                    <th>LENGTH(m)</th>
+
+                    <th>INSULATION THICKNESS(mm)</th>
+                    <th>PRESSURE(pa)</th>
+                    <th>HEAT TRANSFER CO-EFFICIENT(w_m2k)</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for building in data %}
+                <tr>
+                    <td>{{ building.Br_id }}</td>
+
+                    <td>{{ building.area }}</td>
+                    <td>{{ building.water_body }}</td>
+                    <td>{{ building.distance_to_water_body_m }}</td>
+                    <td>{{ building.water_body_temperature }}</td>
+                    <td>{{ building.material }}</td>
+                    <td>{{ building.diameter_mm }}</td>
+                    <td>{{ building.length_m }}</td>
+                    <td>{{ building.insulation_thickness_mm }}</td>
+                    <td>{{ building.pressure_rating_pa }}</td>
+                    <td>{{ building.heat_transfer_coefficient_w_m2k }}</td>
+
+<!--                    <td>-->
+<!--                        <div class="action-buttons">-->
+<!--                            {% if not building.ptdone %}-->
+
+<!--                                <a href="/calculate_pipes/{{building.id}}/"><button class="button-24" role="button">ANALYSE</button></a>-->
+
+<!--                            {% else %}-->
+<!--                            <p style="color:#fd5c63;"> <strong>ANALYZED</strong></p>-->
+<!--                            {% endif %}-->
+<!--                        </div>-->
+<!--                    </td>-->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+          </div>
+    </div>
+
+
+
+</body>
+
+</html>

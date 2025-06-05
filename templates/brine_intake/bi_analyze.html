@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+    <base href="/static/brine_intake/bi_home/">
+    <title>BRINE INTAKE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Home Loan Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- pop up box -->
+    <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- font-awesome icons -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online fonts -->
+    <!-- titles -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- body -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+    <style>
+        .table-striped {
+            background-color: #f8f9fa;
+            margin-bottom: 1rem;
+        }
+
+        .table-striped th,
+        .table-striped td {
+            padding: 0.5rem; /* Adjust padding */
+            vertical-align: middle;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table-striped th {
+            background-color: red;
+            color: #fff;
+            text-align: center;
+        }
+
+        .table-striped td {
+            text-align: center;
+        }
+button {
+    border: none;
+    color: #fff;
+    padding: 4px 8px; /* Smaller padding for a smaller button */
+    font-size: 12px; /* Smaller font size for a neater look */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    text-align: center; /* Center text alignment */
+    display: inline-block; /* Ensure correct sizing */
+    background-color: #007bff; /* Default background color */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Specific style for the ANALYZE button */
+.button-24 {
+    background-color: #437dff; /* Green color for "ANALYZE" button */
+    color: #black; /* White text color */
+    padding: 4px 8px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    border-radius: 4px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Remove hover effect for a consistent look */
+.button-24:hover {
+    background-color:#49ef07; /* Keep the background color same */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Keep the shadow effect same */
+}
+
+/* Style for disabled button */
+.button-24:disabled {
+     background-color: #49ef07; /* Gray color for disabled state */
+    cursor: not-allowed; /* Not-allowed cursor */
+    box-shadow: none; /* Remove shadow */
+}
+
+    </style>
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+
+<body style="background-image: url('/static/brine_intake/bi_home/images/bg2.jpg');
+             height:100vh;">
+
+
+    <!-- header -->
+ <header style="background-color:white;">
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <h1>
+                    <a class="navbar-brand text-capitalize" href="/bi_home/">
+                        BRINE INTAKE
+                    </a>
+                </h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-center  ml-lg-auto">
+                        <li class="nav-item   mr-3">
+                            <a class="nav-link" href="/bi_home/">HOME
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  mr-3">
+                            <a class="nav-link" href="/he_reports/">HEA REPORT</a>
+                        </li>
+                        <li class="nav-item active mr-3">
+                            <a class="nav-link" href="/bi_analyze/">BI ANALYZE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/bi_reports/">BIA REPORT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/brine_logout/">LOGOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <br><br>
+
+
+    <center>
+        <h2 style="color:white">BRINE INTAKE ANALYZE</h2>
+    </center><br><br>
+    <div style="max-height: 300px; overflow: auto; max-width:1100px; margin-left:100px;">
+        <table class="table-striped">
+            <thead>
+                <tr>
+                    <th>BUILDING ID</th>
+                   <th>WATER BODY TEMPERATURE(°C)</th>
+                  <th>HEAT TRANSFER CO-EFFICIENT(w_m2k)</th>
+
+                    <th>Q_SECONDARY(W)</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for building in data %}
+                <tr>
+                    <td>{{ building.Br_id }}</td>
+                    <td>{{ building.water_body_temperature }}</td>
+                    <td>{{ building.heat_transfer_coefficient_w_m2k }}</td>
+
+
+                    <td>{{ building.Q_secondary }}</td>
+                    <td>
+                        <div class="action-buttons">
+                            {% if not building.bidone %}
+                            <a href="/calculate_htc/{{ building.id }}/">
+                                <button class="analyze-button" role="button">ANALYZE</button>
+                            </a>
+                            {% else %}
+                            <p style="color:#fd5c63;"><strong>ANALYZED</strong></p>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- //header -->
+    <!-- banner -->
+
+    <!-- js-->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- js-->
+    <!-- Banner Responsiveslides -->
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <!-- // Banner Responsiveslides -->
+    <!-- stats -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+    <!-- //stats -->
+    <!--pop-up-box -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+        });
+    </script>
+    <!-- //pop-up-box -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.js "></script>
+    <!-- //Bootstrap Core JavaScript -->
+</body>
+
+</html>

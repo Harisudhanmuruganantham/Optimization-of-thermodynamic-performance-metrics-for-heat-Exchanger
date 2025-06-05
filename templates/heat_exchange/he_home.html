@@ -1,0 +1,435 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+   <base href="/static/heat_exchange/he_home/">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>heat exchange</title>
+    <!-- google-fonts -->
+    <link
+        href="//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+ <link rel="stylesheet" href="{% static 'heat_exchange/he_home/css/style-starter.css' %}">
+
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+
+<body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="/he_home/"><i
+                            aria-hidden="true"></i>HEAT EXCHANGE</a>
+                </h1>
+                <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="/he_home/">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                       <li class="nav-item">
+                            <a class="nav-link" href="/he_requirements/">PTA REPORT</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/he_analyze/">HEAT EXCHANGE ANALYZE</a>
+                        </li>
+                        <li class="nav-item">
+                       <a class="nav-link" href="/heat_report/">HEAT EXCHANGE REPORT</a>
+                        </li>
+                        <li class="nav-item">
+                       <a class="nav-link" href="/heat_logout/">LOGOUT</a>
+                        </li>
+                        <!-- search button -->
+                        <div class="search-right">
+<!--                            <a href="#search" class="btn" title="search"><span class="fa fa-search"-->
+<!--                                    aria-hidden="true"></span></a>-->
+                            <!-- search popup -->
+                            <div id="search" class="pop-overlay">
+                                <div class="popup">
+                                    <h4 class="search-pop-text-w3 text-white text-center mb-4">Search Now</h4>
+                                    <form action="#error" method="GET" class="search-box">
+                                        <div class="input-search"> <span class="fa fa-search mr-2"
+                                                aria-hidden="true"></span><input type="search"
+                                                placeholder="Enter Keyword" name="search" required="required"
+                                                autofocus="" class="search-popup">
+                                        </div>
+                                        <button type="submit" class="btn btn-style-white search-btn">Search</button>
+                                    </form>
+                                </div>
+                                <a class="close" href="#close">×</a>
+                            </div>
+                            <!-- //search popup -->
+                        </div>
+                        <!-- //search button -->
+                    </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- banner section -->
+    <section class="w3l-banner pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 banner-left">
+                    <h3 class="text-white mb-3 title">HEAT EXCHANGE
+                        ANALYZE <span class="type-js"><span class="text-js">  </span></span></h3>
+<!--                    <p class="lead text-white">Call Center and Telemarketing Website Theme,-->
+<!--                        <br> We Providing Best Service & 24/7 Support.-->
+<!--                    </p>-->
+                    <div class="mt-5">
+                        <a class="btn btn-style-white" href="/he_home/">View Our Works</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner section -->
+
+    <!-- about -->
+    <section class="w3l-features-photo-7 py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row w3l-features-photo-7_top">
+                <div class="col-lg-6 w3l-features-photo-7_top-left pr-lg-5">
+                    <h4 class="title-style mb-2">About Us</h4>
+                    <p>Heat Exchange Analysis is critical for understanding how thermal energy is transferred from a water body (such as a lake, river, or reservoir) to a residential building
+                    </p>
+                    <div class="row feat_top mt-4 pt-lg-3">
+                        <div class="col-6 w3l-features-photo-7-box">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                            <h5 class="w3l-feature-text my-2">Our Mission</h5>
+                            <p>"Our mission is to deliver comprehensive heat exchange analysis solutions that optimize the transfer of thermal energy from water bodies to residential buildings. We are committed to employing cutting-edge technology and innovative methodologies"</p>
+                        </div>
+                        <div class="col-6 w3l-features-photo-7-box">
+                            <i class="fa fa-angellist" aria-hidden="true"></i>
+                            <h5 class="w3l-feature-text my-2">Our Vision</h5>
+                            <p>"To be a leading authority in optimizing heat exchange systems, ensuring efficient and sustainable energy transfer from water bodies to residential buildings, while enhancing environmental stewardship and comfort for communities worldwide."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 w3l-features-photo-7_top-right mt-lg-0 mt-sm-5 mt-4">
+                    <img src="assets/images/about.jpg" class="img-responsive" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //about -->
+
+    <!-- services section -->
+    <section class="w3l-content-11-main">
+        <div class="content-design-11 py-5">
+            <div class="container py-md-5 py-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="section-heading text-center mb-sm-5 mb-4">
+                            <h3 class="title-style mb-2">We Provide Best Services</h3>
+                            <p class="lead">
+                               Utilizes the latest advancements in heat exchange technology to ensure precise and efficient thermal energy transfer.Conducts thorough and detailed analyses to understand the specific heat transfer requirements of each project.
+                                Offers tailored solutions to meet the unique needs of each residential building.Prioritizes environmentally friendly practices and solutions that minimize energy consumption and reduce carbon footprint
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-sec-11">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="services-single d-flex p-sm-5 p-4">
+                                <div class="service-icon mr-sm-4 mr-3">
+                                    <span  aria-hidden="true"></span>
+                                </div>
+                                <div class="services-content">
+                                    <h5><a href="/he_home/">Heat Exchange Principles</a></h5>
+                                    <p>Heat transfer through the pipe material or heat exchanger walls from the water to the building. Heat transfer between the water and the pipe or heat exchanger surface, and subsequently to the building</p>
+                                    <a href="/he_home/" class="btn read-button d-flex align-items-center mt-4 p-0">Read
+                                        More<i class="fa fa-angle-double-right ml-1" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-single d-flex p-sm-5 p-4">
+                                <div class="service-icon mr-sm-4 mr-3">
+                                    <span  aria-hidden="true"></span>
+                                </div>
+                                <div class="services-content">
+                                    <h5><a href="/he_home/">Heat Transfer Coefficient</a></h5>
+                                    <p>The heat transfer coefficient quantifies the efficiency of heat transfer between the water and the heat exchanger or pipe system. It is a critical parameter in determining the rate of heat exchange.</p>
+                                    <a href="/he_home/" class="btn read-button d-flex align-items-center mt-4 p-0">Read
+                                        More<i class="fa fa-angle-double-right ml-1" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="services-single d-flex p-sm-5 p-4">
+                                <div class="service-icon mr-sm-4 mr-3">
+                                    <span  aria-hidden="true"></span>
+                                </div>
+                                <div class="services-content">
+                                    <h5><a href="/he_home/">Thermal Conductivity</a></h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at
+                                        porttitor vehicula nullam augue ipsum dolor.</p>
+                                    <a href="/he_home/" class="btn read-button d-flex align-items-center mt-4 p-0">Read
+                                        More<i class="fa fa-angle-double-right ml-1" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-single d-flex p-sm-5 p-4">
+                                <div class="service-icon mr-sm-4 mr-3">
+                                    <span  aria-hidden="true"></span>
+                                </div>
+                                <div class="services-content">
+                                    <h5><a href="/he_home/">Heat Exchanger Types</a></h5>
+                                    <p>Efficient for high heat transfer rates in compact spaces.Used where air is the intermediary medium between the water and the building.</p>
+                                    <a href="/he_home/" class="btn read-button d-flex align-items-center mt-4 p-0">Read
+                                        More<i class="fa fa-angle-double-right ml-1" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-md-5 mt-4 text-center">
+                        <a class="btn btn-style-white btn-style-primary" href="/he_home/">Learn More Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //services section -->
+
+    <!-- stats -->
+
+    <!-- //stats -->
+
+    <!-- customers section -->
+
+    <!-- //customers section -->
+
+    <!-- blog section -->
+
+    <!-- //blog section -->
+
+    <!-- call section -->
+
+    <!-- //call section -->
+
+    <!-- footer -->
+
+    <!-- //footer -->
+    <!-- copyright -->
+    <section class="w3l-copyright">
+        <div class="container">
+            <div class="row bottom-copies">
+                <p class="col-lg-8 copy-footer-29">© 2024 Heat Transfer from Water Body to Residential Building</p>
+                <div class="col-lg-4 text-right">
+                    <div class="main-social-footer-29">
+<!--                        <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>-->
+<!--                        <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>-->
+<!--                        <a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>-->
+<!--                        <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>-->
+<!--                        <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //copyright -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-level-up" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+    <script>
+        function autoType(elementClass, typingSpeed) {
+            var thhis = $(elementClass);
+            thhis.css({
+                "position": "relative",
+                "display": "inline-block"
+            });
+            thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+            thhis = thhis.find(".text-js");
+            var text = thhis.text().trim().split('');
+            var amntOfChars = text.length;
+            var newString = "";
+            thhis.text("|");
+            setTimeout(function () {
+                thhis.css("opacity", 1);
+                thhis.prev().removeAttr("style");
+                thhis.text("");
+                for (var i = 0; i < amntOfChars; i++) {
+                    (function (i, char) {
+                        setTimeout(function () {
+                            newString += char;
+                            thhis.text(newString);
+                        }, i * typingSpeed);
+                    })(i + 1, text[i]);
+                }
+            }, 1500);
+        }
+
+        $(document).ready(function () {
+            // Now to start autoTyping just call the autoType function with the 
+            // class of outer div
+            // The second paramter is the speed between each letter is typed.   
+            autoType(".type-js", 200);
+        });
+    </script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
+
+            $('.popup-with-move-anim').magnificPopup({
+                type: 'inline',
+
+                fixedContentPos: false,
+                fixedBgPos: true,
+
+                overflowY: 'auto',
+
+                closeBtnInside: true,
+                preloader: false,
+
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-slide-bottom'
+            });
+        });
+    </script>
+    <!-- //magnific popup -->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- counter for stats -->
+    <script src="assets/js/counter.js"></script>
+    <!-- //counter for stats -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>

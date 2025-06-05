@@ -1,0 +1,7 @@
+heat_exchanger_id,area_sqm,material,dimensions_mm,heat_transfer_coefficient_w_m2k,max_pressure_pa,brine_type,inlet_temperature_c,outlet_temperature_c
+HEX001,50,Stainless Steel,500x500x200,500,100000,Calcium Chloride Solution,10,40
+HEX002,30,Titanium,400x400x150,400,80000,Lithium Bromide Solution,5,35
+HEX003,80,Carbon Steel,600x600x250,600,120000,Potassium Formate Solution,15,45
+HEX004,65,Copper,550x550x220,550,95000,Sodium Chloride Solution,8,38
+HEX005,45,Aluminium,450x450x180,450,110000,Magnesium Chloride Solution,12,42
+HEX006,55,Stainless Steel,480x480x190,480,105000,Ethylene Glycol Solution,7,36

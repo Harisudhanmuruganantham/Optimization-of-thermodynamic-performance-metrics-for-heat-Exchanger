@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generate Pdf</title>
+</head>
+<body>
+{% for i in data %}
+<center><h2>Brine Solution Heat Exchange to Heat Exchanger Analysis</h2></center>
+<h3><b>Requirements for residential building</b></h3>
+<p>Project id:{{i.Br_id}}</p>
+<p>Building Type:{{i.Building_type}}</p>
+<p>Number of rooms:{{i.number_of_rooms}}</p>
+<p>Building Area:{{i.area}}</p>
+<p>Building Temperature:{{i.temperature}}</p>
+<p>Water Body:{{i.water_body}}</p>
+<p>Building Meterial:{{i.building_material}}</p>
+<p>Distance to waterbody:{{i.distance_to_water_body_m}}</p>
+<p>Waterbody Temperature:{{i.water_body_temperature}}</p><br><br><br>
+
+<h3><b>Pipe Transfer Analyze Report</b></h3>
+<p>Piping Material:{{i.material}}</p>
+<p>Piping Diameter:{{i.diameter_mm}}</p>
+<p>Piping Length:{{i.length_m}}</p>
+<p>Insulation thickness:{{i.insulation_thickness_mm}}</p>
+<p>Insulation thickness:{{i.insulation_thickness_mm}}</p>
+<p>Pressure:{{i.pressure_rating_pa}}</p>
+<p>Heat Transfer co-efficient:{{i.heat_transfer_coefficient_w_m2k}}</p>
+
+<h3><b>Heat Exchange Analyze Report</b></h3>
+<p>U_PRIMARY(w_m2k):{{i.U_primary}}</p>
+<p>A_PRIMARY(sqm):{{i.A_primary}}</p>
+<p>DELTA_T_PRIMARY(°C):{{i.delta_T_primary}}</p>
+<p>Q_PRIMARY(W):{{i.Q_primary}}</p>
+<p>U_SECONDARY(w_m2k):{{i.U_secondary}}</p>
+<p>A_SECONDARY(sqm):{{i.A_secondary}}</p>
+<p>DELTA_T_SECONDARY(°C):{{i.delta_T_secondary}}</p>
+<p>Q_SECONDARY(W):{{i.Q_secondary}}</p>
+
+<h3><b>Brine Intake Analyze Report</b></h3>
+<p>BRINE SOLUTION:{{i.brine_solution}}</p>
+<p>HTC(w_m2k):{{i.HTC}}</p>
+<p>THERMAL CONDUCTIVITY(W/(m·K)):{{i.Thermal_Conductivity}}</p>
+<p>DENSITY(kg/m³:{{i.Density}}</p>
+
+<h3><b>Heat Testing Analyze Report</b></h3>
+<p>FINAL TEMP(°C):{{i.final_temperature}}</p>
+
+</body>
+</html>

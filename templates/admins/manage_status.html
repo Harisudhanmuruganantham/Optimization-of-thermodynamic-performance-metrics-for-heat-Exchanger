@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>manage status</title>
+
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Bootie Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'admins/admin_home/css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'admins/admin_home/css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'admins/admin_home/css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <!-- //Fonts -->
+
+    <style>
+        body {
+            /* Body styles if needed */
+        }
+
+        .table-striped {
+            background-color: #f8f9fa;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .table-striped th,
+        .table-striped td {
+            padding: 0.75rem;
+            vertical-align: middle; /* Adjusted vertical alignment */
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table-striped th {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+
+        .table-striped td {
+            text-align: center;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center items vertically */
+        }
+
+        .action-buttons a {
+            margin: 0 5px;
+        }
+
+        .approve, .rejection, .no-action {
+            color: #fff;
+            border: none;
+            padding: 5px 10px; /* Adjusted padding for smaller button */
+            font-size: 14px; /* Adjusted font size for smaller button */
+            cursor: pointer;
+            border-radius: 5px; /* Adjusted border radius for smaller button */
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+
+        .approve::before, .rejection::before, .no-action::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+
+        .approve:hover::before, .rejection:hover::before, .no-action:hover::before {
+            transform: translate(-50%, -50%) scale(2);
+        }
+
+        .approve span, .rejection span, .no-action span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animation for Approve, Reject, and No Action buttons */
+        @keyframes buttonPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+
+        .approve:hover, .rejection:hover, .no-action:hover {
+            animation: buttonPulse 1s forwards;
+        }
+
+        .approve {
+            background-color: #007bff; /* Blue color for approve button */
+        }
+
+        .rejection {
+            background-color: #dc3545;
+        }
+
+        .no-action {
+            background-color: #6c757d;
+        }
+
+    </style>
+</head>
+<script>
+  {% for i in messages %}
+   alert('{{ i }} ')
+  {% endfor %}
+  </script>
+
+<body style="
+    background-image: url('{% static 'admins/admin_home/images/your-image.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+">
+
+
+<!-- main-content -->
+<div class="main-banner" id="home">
+    <!-- header -->
+    <header class="header">
+        <div class="container-fluid px-lg-5">
+            <!-- nav -->
+            <nav class="py-4">
+                <div id="logo">
+                    <!-- <h1> <a href="index.html"><span class="fa fa-bold" aria-hidden="true">Administrator</span></a></h1> -->
+                </div>
+
+                <label for="drop" class="toggle">Menu</label>
+                <input type="checkbox" id="drop" />
+                <ul class="menu mt-2">
+                    <li><a href="{% url 'admin_home' %}">Home</a></li>
+
+                    <li class=" dropdown">
+                        <label for="drop-2" class="toggle">Manage Log <span class="fa fa-angle-down"
+                                                                           aria-hidden="true"></span></label>
+                        <a href="/admin_home/">Manage Log <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                        <input type="checkbox" id="drop-2" />
+                        <ul>
+                            <li><a href="/pipe_transfer_details/">Pipe Transfer</a></li>
+                            <li><a href="/heat_exchange_details/" style="color:black;">Heat Exchange</a></li>
+                            <li><a href="/brine_intake_details/" style="color:black;">Brine Intake</a></li>
+                            <li><a href="/heat_testing_details/" style="color:black;">Heat Testing</a></li>
+                        </ul>
+                    </li>
+                      <li><a href="/admin_requirements/">Requirements</a></li>
+                    <li class="active"><a href="/admin_Manage_status/">Manage_status</a></li>
+                    <li class="dropdown">
+                            <label for="drop-2" class="toggle">REPORTS <span class="fa fa-angle-down"
+                                    aria-hidden="true"></span></label>
+                            <a href="/admin_home/">REPORTS <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul>
+                                <li ><a href="/pt_report">PTA REPORT</a></li>
+                                <li ><a href="/he_report/">HEA REPORT</a></li>
+                                <li ><a href="/bi_report/">BIA REPORT</a></li>
+                                <li><a href="/ht_report/">HTA REPORT</a></li>
+                            </ul>
+                        </li>
+
+
+
+                   <li><a href="/admin_logout/">Logout</a></li>
+                </ul>
+            </nav>
+            <!-- //nav -->
+        </div>
+
+        <br>
+        <div class="container">
+
+            <h2 style="margin-left: 400px;color:white" >MANAGE STATUS DETAILS</h2>
+
+            <br><br>
+            <table class="table-striped">
+                <thead>
+                <tr>
+                    <th>Br_id</th>
+                    <th>Building type</th>
+                    <th>Number of rooms</th>
+                    <th>Area in m2</th>
+                       <th>Building temp(celcius)</th>
+                    <th>Water body</th>
+                    <th>Distance in m</th>
+                    <th>Watertemperature in celcius</th>
+                    <th>BUILDING MATERIAL</th>
+                    <th>GENERATE REPORT</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in data %}
+                <tr>
+                    <td>{{ user.Br_id }}</td>
+                    <td>{{ user.Building_type }}</td>
+                    <td>{{ user.number_of_rooms }}</td>
+                    <td>{{ user.area }}</td>
+                     <td>{{ user.temperature }}</td>
+                    <td>{{ user.water_body }}</td>
+                    <td>{{ user.distance_to_water_body_m }}</td>
+                    <td>{{ user.water_body_temperature }}</td>
+                    <td>{{ user.building_material }}</td>
+                     <td>
+                            <div class="action-buttons">
+                                {% if user.htdone and not user.fview %}
+                                <a href="/generate_pdf/{{ user.id }}/">
+                                    <button class="approve">PDF</button>
+                                </a>
+
+                                {% elif user.fview and user.htdone %}
+                                <a href="{{ user.f_report.url }}" target="_blank"> <button class="approve">REPORT</button></a>
+
+                                {% else %}
+                               {{user.status}}
+                                {% endif %}
+                     </td>
+
+
+
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+            <!-- Replace this with Django pagination logic if needed -->
+            <!-- <div class="pagination">
+                <a href="?page=1">1</a>
+                <a href="?page=2">2</a>
+                ...
+            </div> -->
+
+        </div>
+    </header>
+</div>
+
+</body>
+</html>

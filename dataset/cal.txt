@@ -1,0 +1,92 @@
+import math
+
+# Given parameters
+area_sqm = 223.0773
+water_body_temp_inlet = 25.0  # Inlet temperature for both sides
+water_body_temp_outlet_primary = 40.0  # Outlet temperature for Q_PRIMARY
+water_body_temp_outlet_secondary = 35.0  # Outlet temperature for Q_SECONDARY
+material = 'Stainless steel'  # Assuming stainless steel
+
+diameter_mm = 300.0
+length_m = 1115.3865
+insulation_thickness_mm = 30.0
+pressure_pa = 1500.0
+heat_transfer_coefficient_w_m2k = 250.0
+
+# Convert units
+diameter_m = diameter_mm / 1000.0  # Convert mm to meters
+insulation_thickness_m = insulation_thickness_mm / 1000.0  # Convert mm to meters
+
+# Calculate surface area A for primary side (assuming a cylinder)
+radius_m = diameter_m / 2.0
+area_primary = math.pi * diameter_m * length_m
+
+# Calculate surface area A for secondary side (assuming a cylinder)
+area_secondary = math.pi * diameter_m * length_m
+
+# Calculate temperature differences (ΔT)
+delta_t_primary = water_body_temp_outlet_primary - water_body_temp_inlet
+delta_t_secondary = water_body_temp_outlet_secondary - water_body_temp_inlet
+
+# Calculate Q_PRIMARY and Q_SECONDARY
+q_primary = heat_transfer_coefficient_w_m2k * area_primary * delta_t_primary
+q_secondary = heat_transfer_coefficient_w_m2k * area_secondary * delta_t_secondary
+
+print(f"Q_PRIMARY: {q_primary} W")
+print(f"Q_SECONDARY: {q_secondary} W")
+
+
+
+
+heat_exchanger_id,area_sqm,material,heat_transfer_coefficient_w_m2k,max_pressure_pa
+HEX001,50,Stainless Steel,500,100000
+HEX002,30,Titanium,400,80000
+HEX003,80,Carbon Steel,600,120000
+HEX004,65,Copper,550,95000
+HEX005,45,Aluminium,450,110000
+HEX006,55,Stainless Steel,480,105000
+HEX007,60,Brass,520,100000
+HEX008,40,Nickel Alloy,470,90000
+HEX009,70,Inconel,590,115000
+HEX010,35,Duplex Stainless Steel,430,85000
+HEX011,75,Hastelloy,620,125000
+HEX012,25,Monel,380,70000
+HEX013,85,Nickel,650,130000
+HEX014,55,Tantalum,580,110000
+HEX015,45,Zirconium,540,100000
+HEX016,65,Graphite,470,95000
+HEX017,35,PTFE,320,75000
+HEX018,70,Polypropylene,430,105000
+HEX019,80,PVC,450,110000
+HEX020,40,Ceramic,380,90000
+HEX021,60,Fiberglass,400,95000
+HEX022,50,Titanium Alloy,520,105000
+HEX023,55,Alloy Steel,490,100000
+HEX024,45,Lead,360,85000
+HEX025,70,Silver,600,120000
+HEX026,65,Platinum,630,115000
+HEX027,75,Gold,680,130000
+HEX028,80,Titanium Alloy,550,110000
+HEX029,35,Stainless Steel,460,90000
+HEX030,40,Copper Alloy,490,95000
+HEX031,50,Inconel,510,100000
+HEX032,60,Hastelloy,590,105000
+HEX033,65,Tantalum,640,110000
+HEX034,75,Zirconium,670,115000
+HEX035,85,Graphite,480,95000
+HEX036,45,PTFE,330,80000
+HEX037,40,Polypropylene,410,85000
+HEX038,55,PVC,440,90000
+HEX039,60,Ceramic,470,95000
+HEX040,75,Fiberglass,590,110000
+
+
+
+
+heat_exchanger_id	area_sqm	material	dimensions_mm	heat_transfer_coefficient_w_m2k	max_pressure_pa	brine_type	inlet_temperature_c	outlet_temperature_c
+HEX001	50	Stainless Steel	500x500x200	500	100000	Calcium Chloride Solution	10	40
+HEX002	30	Titanium	400x400x150	400	80000	Lithium Bromide Solution	5	35
+HEX003	80	Carbon Steel	600x600x250	600	120000	Potassium Formate Solution	15	45
+HEX004	65	Copper	550x550x220	550	95000	Sodium Chloride Solution	8	38
+HEX005	45	Aluminium	450x450x180	450	110000	Magnesium Chloride Solution	12	42
+HEX006	55	Stainless Steel	480x480x190	480	105000	Ethylene Glycol Solution	7	36
